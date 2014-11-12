@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/maelstrom/option.xsd">
+	<import>
+		<categories>
+			
+			<category name="jcoins.buycoins">
+				<parent>jcoins</parent>
+			</category>
+			
+			<category name="jcoins.buycoins.general">
+				<parent>jcoins.buycoins</parent>
+			</category>
+		</categories>
+		
+		<options>
+			<option name="module_jcoins_buy">
+				<categoryname>module.jcoins</categoryname>
+				<optiontype>boolean</optiontype>
+				<defaultvalue>1</defaultvalue>
+			</option>
+                        
+			<option name="jcoins_buy_siteid">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>0</defaultvalue>
+			</option>
+			
+			<option name="jcoins_buy_sitepass">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>text</optiontype>
+				<defaultvalue></defaultvalue>
+			</option>
+                        
+			<option name="jcoins_buy_language">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>select</optiontype>
+				<selectoptions>
+<![CDATA[en:wcf.acp.option.jcoins_buy_language_en
+nl:wcf.acp.option.jcoins_buy_language_nl]]>
+</selectoptions>
+				<defaultvalue><![CDATA[en]]></defaultvalue>
+			</option>
+			
+			<option name="jcoins_buy_option1">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>select</optiontype>
+								<selectoptions>Disabled
+Call
+SMS
+Paysafecard
+Bancontact-mistercash
+Wire-transfer
+Paypal
+iDeal</selectoptions>
+				<defaultvalue>Call</defaultvalue>
+			</option>			
+                        
+			<option name="jcoins_buy_option1_amount">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>150</defaultvalue>
+			</option>
+                        
+                        
+			<option name="jcoins_buy_option2">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>select</optiontype>
+								<selectoptions>Disabled
+Call
+SMS
+Paysafecard
+Bancontact-mistercash
+Wire-transfer
+Paypal
+iDeal</selectoptions>
+				<defaultvalue>SMS</defaultvalue>
+			</option>			
+                        
+			<option name="jcoins_buy_option2_amount">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>200</defaultvalue>
+			</option>		
+                        
+                        
+			<option name="jcoins_buy_option3">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>select</optiontype>
+								<selectoptions>Disabled
+Call
+SMS
+Paysafecard
+Bancontact-mistercash
+Wire-transfer
+Paypal
+iDeal</selectoptions>
+				<defaultvalue>Paysafecard</defaultvalue>
+			</option>			
+                        
+			<option name="jcoins_buy_option3_amount">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>250</defaultvalue>
+			</option>			
+
+                        
+                        
+			<option name="jcoins_buy_option4">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>select</optiontype>
+								<selectoptions>Disabled
+Call
+SMS
+Paysafecard
+Bancontact-mistercash
+Wire-transfer
+Paypal
+iDeal</selectoptions>
+				<defaultvalue>Paysafecard</defaultvalue>
+			</option>			
+                        
+			<option name="jcoins_buy_option4_amount">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>500</defaultvalue>
+			</option>			
+
+
+
+			<option name="jcoins_buy_option5">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>select</optiontype>
+								<selectoptions>Disabled
+Call
+SMS
+Paysafecard
+Bancontact-mistercash
+Wire-transfer
+Paypal
+iDeal</selectoptions>
+				<defaultvalue>Paysafecard</defaultvalue>
+			</option>			
+                        
+			<option name="jcoins_buy_option5_amount">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>1000</defaultvalue>
+			</option>			
+
+			<option name="jcoins_buy_option6">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>select</optiontype>
+								<selectoptions>Disabled
+Call
+SMS
+Paysafecard
+Bancontact-mistercash
+Wire-transfer
+Paypal
+iDeal</selectoptions>
+				<defaultvalue>Paysafecard</defaultvalue>
+			</option>			
+                        
+			<option name="jcoins_buy_option6_amount">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>2500</defaultvalue>
+			</option>			
+
+
+			<option name="jcoins_buy_option7">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>select</optiontype>
+								<selectoptions>Disabled
+Call
+SMS
+Paysafecard
+Bancontact-mistercash
+Wire-transfer
+Paypal
+iDeal</selectoptions>
+				<defaultvalue>Paysafecard</defaultvalue>
+			</option>			
+                        
+			<option name="jcoins_buy_option7_amount">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>5000</defaultvalue>
+			</option>			
+
+
+			<option name="jcoins_buy_option8">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>select</optiontype>
+								<selectoptions>Disabled
+Call
+SMS
+Paysafecard
+Bancontact-mistercash
+Wire-transfer
+Paypal
+iDeal</selectoptions>
+				<defaultvalue>Paysafecard</defaultvalue>
+			</option>			
+                        
+			<option name="jcoins_buy_option8_amount">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>10000</defaultvalue>
+			</option>			
+
+
+			<option name="jcoins_buy_option9">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>select</optiontype>
+								<selectoptions>Disabled
+Call
+SMS
+Paysafecard
+Bancontact-mistercash
+Wire-transfer
+Paypal
+iDeal</selectoptions>
+				<defaultvalue>Bancontact-mistercash</defaultvalue>
+			</option>			
+                        
+			<option name="jcoins_buy_option9_amount">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>250</defaultvalue>
+			</option>			
+
+
+			<option name="jcoins_buy_option10">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>select</optiontype>
+								<selectoptions>Disabled
+Call
+SMS
+Paysafecard
+Bancontact-mistercash
+Wire-transfer
+Paypal
+iDeal</selectoptions>
+				<defaultvalue>Bancontact-mistercash</defaultvalue>
+			</option>			
+                        
+			<option name="jcoins_buy_option10_amount">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>500</defaultvalue>
+			</option>			
+
+
+			<option name="jcoins_buy_option11">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>select</optiontype>
+								<selectoptions>Disabled
+Call
+SMS
+Paysafecard
+Bancontact-mistercash
+Wire-transfer
+Paypal
+iDeal</selectoptions>
+				<defaultvalue>Bancontact-mistercash</defaultvalue>
+			</option>			
+                        
+			<option name="jcoins_buy_option11_amount">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>1000</defaultvalue>
+			</option>			
+
+
+			<option name="jcoins_buy_option12">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>select</optiontype>
+								<selectoptions>Disabled
+Call
+SMS
+Paysafecard
+Bancontact-mistercash
+Wire-transfer
+Paypal
+iDeal</selectoptions>
+				<defaultvalue>Bancontact-mistercash</defaultvalue>
+			</option>			
+                        
+			<option name="jcoins_buy_option12_amount">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>2500</defaultvalue>
+			</option>			
+
+
+			<option name="jcoins_buy_option13">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>select</optiontype>
+								<selectoptions>Disabled
+Call
+SMS
+Paysafecard
+Bancontact-mistercash
+Wire-transfer
+Paypal
+iDeal</selectoptions>
+				<defaultvalue>Bancontact-mistercash</defaultvalue>
+			</option>			
+                        
+			<option name="jcoins_buy_option13_amount">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>5000</defaultvalue>
+			</option>			
+
+
+			<option name="jcoins_buy_option14">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>select</optiontype>
+								<selectoptions>Disabled
+Call
+SMS
+Paysafecard
+Bancontact-mistercash
+Wire-transfer
+Paypal
+iDeal</selectoptions>
+				<defaultvalue>Bancontact-mistercash</defaultvalue>
+			</option>			
+                        
+			<option name="jcoins_buy_option14_amount">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>10000</defaultvalue>
+			</option>			
+
+
+			<option name="jcoins_buy_option15">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>select</optiontype>
+								<selectoptions>Disabled
+Call
+SMS
+Paysafecard
+Bancontact-mistercash
+Wire-transfer
+Paypal
+iDeal</selectoptions>
+				<defaultvalue>Wire-transfer</defaultvalue>
+			</option>			
+                        
+			<option name="jcoins_buy_option15_amount">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>250</defaultvalue>
+			</option>
+
+
+			<option name="jcoins_buy_option16">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>select</optiontype>
+								<selectoptions>Disabled
+Call
+SMS
+Paysafecard
+Bancontact-mistercash
+Wire-transfer
+Paypal
+iDeal</selectoptions>
+				<defaultvalue>Wire-transfer</defaultvalue>
+			</option>			
+                        
+			<option name="jcoins_buy_option16_amount">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>500</defaultvalue>
+			</option>			
+
+
+			<option name="jcoins_buy_option17">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>select</optiontype>
+								<selectoptions>Disabled
+Call
+SMS
+Paysafecard
+Bancontact-mistercash
+Wire-transfer
+Paypal
+iDeal</selectoptions>
+				<defaultvalue>Wire-transfer</defaultvalue>
+			</option>			
+                        
+			<option name="jcoins_buy_option17_amount">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>1000</defaultvalue>
+			</option>			
+
+
+			<option name="jcoins_buy_option18">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>select</optiontype>
+								<selectoptions>Disabled
+Call
+SMS
+Paysafecard
+Bancontact-mistercash
+Wire-transfer
+Paypal
+iDeal</selectoptions>
+				<defaultvalue>Wire-transfer</defaultvalue>
+			</option>			
+                        
+			<option name="jcoins_buy_option18_amount">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>2000</defaultvalue>
+			</option>			
+
+
+			<option name="jcoins_buy_option19">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>select</optiontype>
+								<selectoptions>Disabled
+Call
+SMS
+Paysafecard
+Bancontact-mistercash
+Wire-transfer
+Paypal
+iDeal</selectoptions>
+				<defaultvalue>Wire-transfer</defaultvalue>
+			</option>			
+                        
+			<option name="jcoins_buy_option19_amount">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>5000</defaultvalue>
+			</option>			
+
+
+			<option name="jcoins_buy_option20">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>select</optiontype>
+								<selectoptions>Disabled
+Call
+SMS
+Paysafecard
+Bancontact-mistercash
+Wire-transfer
+Paypal
+iDeal</selectoptions>
+				<defaultvalue>Wire-transfer</defaultvalue>
+			</option>			
+                        
+			<option name="jcoins_buy_option20_amount">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>10000</defaultvalue>
+			</option>			
+
+
+			<option name="jcoins_buy_option21">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>select</optiontype>
+								<selectoptions>Disabled
+Call
+SMS
+Paysafecard
+Bancontact-mistercash
+Wire-transfer
+Paypal
+iDeal</selectoptions>
+				<defaultvalue>Paypal</defaultvalue>
+			</option>			
+                        
+			<option name="jcoins_buy_option21_amount">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>500</defaultvalue>
+			</option>			
+
+
+
+
+			<option name="jcoins_buy_option22">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>select</optiontype>
+								<selectoptions>Disabled
+Call
+SMS
+Paysafecard
+Bancontact-mistercash
+Wire-transfer
+Paypal
+iDeal</selectoptions>
+				<defaultvalue>Paypal</defaultvalue>
+			</option>			
+                        
+			<option name="jcoins_buy_option22_amount">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>1000</defaultvalue>
+			</option>			
+
+
+
+			<option name="jcoins_buy_option23">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>select</optiontype>
+								<selectoptions>Disabled
+Call
+SMS
+Paysafecard
+Bancontact-mistercash
+Wire-transfer
+Paypal
+iDeal</selectoptions>
+				<defaultvalue>Paypal</defaultvalue>
+			</option>			
+                        
+			<option name="jcoins_buy_option23_amount">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>2000</defaultvalue>
+			</option>			
+
+
+
+			<option name="jcoins_buy_option24">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>select</optiontype>
+								<selectoptions>Disabled
+Call
+SMS
+Paysafecard
+Bancontact-mistercash
+Wire-transfer
+Paypal
+iDeal</selectoptions>
+				<defaultvalue>Paypal</defaultvalue>
+			</option>			
+                        
+			<option name="jcoins_buy_option24_amount">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>5000</defaultvalue>
+			</option>			
+
+
+
+			<option name="jcoins_buy_option25">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>select</optiontype>
+								<selectoptions>Disabled
+Call
+SMS
+Paysafecard
+Bancontact-mistercash
+Wire-transfer
+Paypal
+iDeal</selectoptions>
+				<defaultvalue>Paypal</defaultvalue>
+			</option>			
+                        
+			<option name="jcoins_buy_option25_amount">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>10000</defaultvalue>
+			</option>			
+
+
+
+			<option name="jcoins_buy_option26">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>select</optiontype>
+								<selectoptions>Disabled
+Call
+SMS
+Paysafecard
+Bancontact-mistercash
+Wire-transfer
+Paypal
+iDeal</selectoptions>
+				<defaultvalue>iDeal</defaultvalue>
+			</option>			
+                        
+			<option name="jcoins_buy_option26_amount">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>250</defaultvalue>
+			</option>			
+
+
+
+			<option name="jcoins_buy_option27">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>select</optiontype>
+								<selectoptions>Disabled
+Call
+SMS
+Paysafecard
+Bancontact-mistercash
+Wire-transfer
+Paypal
+iDeal</selectoptions>
+				<defaultvalue>iDeal</defaultvalue>
+			</option>			
+                        
+			<option name="jcoins_buy_option27_amount">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>500</defaultvalue>
+			</option>			
+
+
+
+			<option name="jcoins_buy_option28">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>select</optiontype>
+								<selectoptions>Disabled
+Call
+SMS
+Paysafecard
+Bancontact-mistercash
+Wire-transfer
+Paypal
+iDeal</selectoptions>
+				<defaultvalue>iDeal</defaultvalue>
+			</option>			
+                        
+			<option name="jcoins_buy_option28_amount">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>1000</defaultvalue>
+			</option>			
+
+
+
+			<option name="jcoins_buy_option29">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>select</optiontype>
+								<selectoptions>Disabled
+Call
+SMS
+Paysafecard
+Bancontact-mistercash
+Wire-transfer
+Paypal
+iDeal</selectoptions>
+				<defaultvalue>iDeal</defaultvalue>
+			</option>			
+                        
+			<option name="jcoins_buy_option29_amount">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>2500</defaultvalue>
+			</option>			
+
+
+
+			<option name="jcoins_buy_option30">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>select</optiontype>
+								<selectoptions>Disabled
+Call
+SMS
+Paysafecard
+Bancontact-mistercash
+Wire-transfer
+Paypal
+iDeal</selectoptions>
+				<defaultvalue>iDeal</defaultvalue>
+			</option>			
+                        
+			<option name="jcoins_buy_option30_amount">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>5000</defaultvalue>
+			</option>			
+
+			<option name="jcoins_buy_optioncustom">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>boolean</optiontype>
+				<defaultvalue>1</defaultvalue>
+			</option>
+
+			
+		</options>
+	</import>
+</data>

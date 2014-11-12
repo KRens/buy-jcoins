@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/maelstrom/language.xsd" languagecode="de" languagename="Deutsch" countrycode="de">
+	<!-- ACP OPTIONS -->
+	<category name="wcf.acp.option">
+		<item name="wcf.acp.option.category.jcoins.buycoins.buy"><![CDATA[jCoins kaufen]]></item>
+		<item name="wcf.acp.option.jcoins_buy"><![CDATA[jCoins kaufen]]></item>
+
+		<item name="wcf.acp.option.category.jcoins.buycoins"><![CDATA[Kaufe]]></item>
+		<item name="wcf.acp.option.category.jcoins.buycoins.general"><![CDATA[Allgemein]]></item>
+		
+		<item name="wcf.acp.option.module_jcoins_buy"><![CDATA[jCoins kaufen]]></item>
+		<item name="wcf.acp.option.jcoins_buy_siteid"><![CDATA[Dimopay.com WebseitenID]]></item>
+		<item name="wcf.acp.option.jcoins_buy_siteid.description"><![CDATA[Um Zahlungen zu erhalten, musst du ein Konto bei www.dimopay.com erstellen. Trage deine WebseitenID von dimopay hier ein.]]></item>
+		<item name="wcf.acp.option.jcoins_buy_sitepass"><![CDATA[Dimopay.com Webseiten-Passwort]]></item>
+		<item name="wcf.acp.option.jcoins_buy_sitepass.description"><![CDATA[Bitte trage hier dein Passwort ein. Dieses findest du im Adminpanel von www.dimopay.com (sitepass).]]></item>		
+
+		<item name="wcf.acp.option.jcoins_buy_language"><![CDATA[Dimopay.com sprache]]></item>
+		<item name="wcf.acp.option.jcoins_buy_language_en"><![CDATA[Englisch]]></item>
+		<item name="wcf.acp.option.jcoins_buy_language_nl"><![CDATA[Niederländisch]]></item>
+		
+		<item name="wcf.acp.option.jcoins_buy_option1"><![CDATA[Zahlungsmethode 1]]></item>
+				<item name="wcf.acp.option.jcoins_buy_option1.description"><![CDATA[Achtung: iDeal ist nur in den Niederlanden verfügbar]]></item>	
+		<item name="wcf.acp.option.jcoins_buy_option1_amount"><![CDATA[Betrag für Zahlungsmethode 1]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option1_amount.description"><![CDATA[Die folgenden Zahlungsmethoden unterstützen nur die jeweiligen Beträge: Anruf: 130, 150 und 499; SMS: 150, 200, 499, 500, 599 und 600]]></item>			
+		<item name="wcf.acp.option.jcoins_buy_option2"><![CDATA[Zahlungsmethode 2]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option2_amount"><![CDATA[Betrag für Zahlungsmethode 2]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option3"><![CDATA[Zahlungsmethode 3]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option3_amount"><![CDATA[Betrag für Zahlungsmethode 3]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option4"><![CDATA[Zahlungsmethode 4]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option4_amount"><![CDATA[Betrag für Zahlungsmethode 4]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option5"><![CDATA[Zahlungsmethode 5]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option5_amount"><![CDATA[Betrag für Zahlungsmethode 5]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option6"><![CDATA[Zahlungsmethode 6]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option6_amount"><![CDATA[Betrag für Zahlungsmethode 6]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option7"><![CDATA[Zahlungsmethode 7]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option7_amount"><![CDATA[Betrag für Zahlungsmethode 7]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option8"><![CDATA[Zahlungsmethode 8]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option8_amount"><![CDATA[Betrag für Zahlungsmethode 8]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option9"><![CDATA[Zahlungsmethode 9]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option9_amount"><![CDATA[Betrag für Zahlungsmethode 9]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option10"><![CDATA[Zahlungsmethode 10]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option10_amount"><![CDATA[Betrag für Zahlungsmethode 10]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option11"><![CDATA[Zahlungsmethode 11]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option11_amount"><![CDATA[Betrag für Zahlungsmethode 11]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option12"><![CDATA[Zahlungsmethode 12]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option12_amount"><![CDATA[Betrag für Zahlungsmethode 12]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option13"><![CDATA[Zahlungsmethode 13]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option13_amount"><![CDATA[Betrag für Zahlungsmethode 13]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option14"><![CDATA[Zahlungsmethode 14]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option14_amount"><![CDATA[Betrag für Zahlungsmethode 14]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option15"><![CDATA[Zahlungsmethode 15]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option15_amount"><![CDATA[Betrag für Zahlungsmethode 15]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option16"><![CDATA[Zahlungsmethode 16]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option16_amount"><![CDATA[Betrag für Zahlungsmethode 16]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option17"><![CDATA[Zahlungsmethode 17]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option17_amount"><![CDATA[Betrag für Zahlungsmethode 17]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option18"><![CDATA[Zahlungsmethode 18]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option18_amount"><![CDATA[Betrag für Zahlungsmethode 18]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option19"><![CDATA[Zahlungsmethode 19]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option19_amount"><![CDATA[Betrag für Zahlungsmethode 19]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option20"><![CDATA[Zahlungsmethode 20]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option20_amount"><![CDATA[Betrag für Zahlungsmethode 20]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option21"><![CDATA[Zahlungsmethode 21]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option21_amount"><![CDATA[Betrag für Zahlungsmethode 21]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option22"><![CDATA[Zahlungsmethode 22]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option22_amount"><![CDATA[Betrag für Zahlungsmethode 22]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option23"><![CDATA[Zahlungsmethode 23]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option23_amount"><![CDATA[Betrag für Zahlungsmethode 23]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option24"><![CDATA[Zahlungsmethode 24]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option24_amount"><![CDATA[Betrag für Zahlungsmethode 24]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option25"><![CDATA[Zahlungsmethode 25]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option25_amount"><![CDATA[Betrag für Zahlungsmethode 25]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option26"><![CDATA[Zahlungsmethode 26]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option26_amount"><![CDATA[Betrag für Zahlungsmethode 26]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option27"><![CDATA[Zahlungsmethode 27]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option27_amount"><![CDATA[Betrag für Zahlungsmethode 27]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option28"><![CDATA[Zahlungsmethode 28]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option28_amount"><![CDATA[Betrag für Zahlungsmethode 28]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option29"><![CDATA[Zahlungsmethode 29]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option29_amount"><![CDATA[Betrag für Zahlungsmethode 29]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option30"><![CDATA[Zahlungsmethode 30]]></item>
+		<item name="wcf.acp.option.jcoins_buy_option30_amount"><![CDATA[Betrag für Zahlungsmethode 30]]></item>
+		<item name="wcf.acp.option.jcoins_buy_optioncustom"><![CDATA[Dem Benutzer erlauben eigene Beträge zu wählen.]]></item>
+			
+		
+		
+	</category>
+	
+	<category name="wcf.acp.group">
+		<item name="wcf.acp.group.option.user.jcoins.canBuy"><![CDATA[Darf {JCOINS_NAME} kaufen]]></item>
+	</category>
+    
+	<category name="wcf.jcoins">   
+	    <!-- MENU -->
+                <item name="wcf.jcoins.menuBuy"><![CDATA[Kaufe {JCOINS_NAME}]]></item>     
+		<!-- STATEMENTS -->
+                <!-- BUYING -->
+                <item name="wcf.jcoins.buy"><![CDATA[Kaufe {JCOINS_NAME}]]></item>
+                <item name="wcf.jcoins.transfer.exchangeCode"><![CDATA[Verifiziere Transaktion]]></item>
+                <item name="wcf.jcoins.buy.userIgnores"><![CDATA[Der Benutzer {$ignoredUsername} ignoriert Sie...]]></item>   
+                <item name="wcf.jcoins.buy.code"><![CDATA[Transaktionscode]]></item>
+                <item name="wcf.jcoins.buy.getCode"><![CDATA[Transaktionscode erhalten]]></item>
+                
+                <item name="wcf.jcoins.buy.restart"><![CDATA[Wähle eine andere Zahlungsmethode oder ein anderes Land aus]]></item>
+                <item name="wcf.jcoins.buy.selectCountry"><![CDATA[Wähle dein Land aus]]></item>
+                <item name="wcf.jcoins.buy.Belgium"><![CDATA[Belgien]]></item>
+                <item name="wcf.jcoins.buy.Netherlands"><![CDATA[Niederlande]]></item>
+                <item name="wcf.jcoins.buy.France"><![CDATA[Frankreich]]></item>
+                <item name="wcf.jcoins.buy.Italy"><![CDATA[Italien]]></item>
+                <item name="wcf.jcoins.buy.Switzerland"><![CDATA[Schweiz]]></item>
+                <item name="wcf.jcoins.buy.Austria"><![CDATA[Östereich]]></item>
+                <item name="wcf.jcoins.buy.GreatBritain"><![CDATA[Großbritannien]]></item>
+                <item name="wcf.jcoins.buy.Germany"><![CDATA[Deutschland]]></item>
+                <item name="wcf.jcoins.buy.Luxemburg"><![CDATA[Luxemburg]]></item>
+                <item name="wcf.jcoins.buy.countryOthers"><![CDATA[Andere]]></item>
+                <item name="wcf.jcoins.buy.paymentMethod"><![CDATA[Zahlungsmethode]]></item>
+                <item name="wcf.jcoins.buy.Price"><![CDATA[Preis]]></item>
+                <item name="wcf.jcoins.buy.amountjCoins"><![CDATA[Anzahl an {JCOINS_NAME}]]></item>
+                <item name="wcf.jcoins.buy.call"><![CDATA[Anruf]]></item>
+                <item name="wcf.jcoins.buy.sms"><![CDATA[SMS]]></item>
+                <item name="wcf.jcoins.buy.wireTransfer"><![CDATA[Banküberweisung]]></item>
+                <item name="wcf.jcoins.buy.paysafecard"><![CDATA[Paysafecard]]></item>
+                <item name="wcf.jcoins.buy.iDeal"><![CDATA[iDeal]]></item>
+                <item name="wcf.jcoins.buy.PayPal"><![CDATA[PayPal]]></item>
+                <item name="wcf.jcoins.buy.bancontact"><![CDATA[Bancontact / Mistercash]]></item>
+                <item name="wcf.jcoins.buy.others"><![CDATA[Wähle eine Zahl an {JCOINS_NAME}]]></item>
+                <item name="wcf.jcoins.buy.goToPaymentScreen"><![CDATA[Weiter zur Zahlungsübersicht]]></item>
+                
+
+                <!-- BUYING SUCCESS -->
+                <item name="wcf.jcoins.buy.success"><![CDATA[Der Transaktionscode ist gültig. {JCOINS_NAME} wurden dir gutgeschrieben.]]></item>                             
+                
+                <!-- BUYING ERRORS -->
+                <item name="wcf.jcoins.buy.error.tooShort"><![CDATA[Dein Transaktionscode ist zu kurz.]]></item>
+                <item name="wcf.jcoins.buy.error.tooLong"><![CDATA[Dein Transaktionscode ist zu lang.]]></item>
+                <item name="wcf.jcoins.buy.error.invalidPaycode"><![CDATA[Dein Transaktionscode ist ungültig.]]></item>
+                <item name="wcf.jcoins.buy.error.noAccessPaymentProvider"><![CDATA[Die Webseite ist nicht berechtigt Zahlungen anzufordern. Bitte Kontaktiere den Webmaster.]]></item>
+                <item name="wcf.jcoins.buy.error.noPaycodeEntered"><![CDATA[Es wurde kein Transaktionscode eingegeben.]]></item>
+                <item name="wcf.jcoins.buy.error.paycodeUsed"><![CDATA[Dieser Transaktionscode ist nicht mehr gültig. Wahrscheinlich wurde er bereits benutzt.]]></item>
+                <item name="wcf.jcoins.buy.error.paycodeUsedFailed"><![CDATA[Dieser Transaktionscode ist nicht mehr gültig. Wahrscheinlich wurde er bereits benutzt. Bitte kontaktiere den Webmaster.]]></item>
+                <item name="wcf.jcoins.buy.error.invalidAmount"><![CDATA[Ungültiger Zahlungsbetrag. Der Pin-Code hat einen Wert von unter 1 Eurocent und kann nicht verwendet werden werden. ]]></item>                
+                <item name="wcf.jcoins.buy.error.paycodeNotProcessed"><![CDATA[Deine Zahlung muss noch manuell bestätigt werden. Dies kann einige Stunden in Anspruch nehmen.]]></item>
+                <item name="wcf.jcoins.buy.error.invalidValue"><![CDATA[Dieser Transaktionscode hat einen ungültigen Wert. Bitte wende dich an den Webmaster und teile ihm den eingegebenen Code mit.]]></item>
+
+    </category>
+</language>

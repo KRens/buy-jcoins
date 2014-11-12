@@ -1,0 +1,1 @@
+{if $__wcf->session->getPermission('user.jcoins.canBuy')}<li><a href="{link controller='JCoinsBuy'}{/link}">{lang}wcf.jcoins.menuBuy{/lang}</a></li>{/if}

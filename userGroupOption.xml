@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com/XSD/maelstrom/userGroupOption.xsd">
+	<import>
+	
+		<categories>
+			<category name="user.jcoins.canBuy">
+				<parent>user.jcoins</parent>
+				<options>module_jcoins</options>
+			</category>
+		</categories>
+		
+		<options>
+	
+			<option name="user.jcoins.canBuy">
+				<categoryname>user.jcoins.general</categoryname>
+				<optiontype>boolean</optiontype>
+				<userdefaultvalue>1</userdefaultvalue>
+				<admindefaultvalue>1</admindefaultvalue>
+				<defaultvalue>1</defaultvalue>
+			</option>
+		</options>	
+	</import>
+</data>

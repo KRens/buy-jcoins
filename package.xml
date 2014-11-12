@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package name="be.ictscripters.jcoinsBuy" xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/maelstrom/package.xsd">
+	<packageinformation>
+		<packagename><![CDATA[jCoins - Buy jCoins]]></packagename>
+		<packagename language="de"><![CDATA[jCoins - Buy jCoins]]></packagename>
+		<packagedescription><![CDATA[Allows users to buy jCoins, using paypal, creditcard, ...]]></packagedescription>
+		<packagedescription language="de"><![CDATA[Ermöglicht es Benutzern, jCoins zu kaufen, mit PayPal, Kreditkarte, ...]]></packagedescription>
+		<version>0.0.2</version>
+		<date>2014-09-13</date>
+	</packageinformation>
+	
+	<authorinformation>
+		<author><![CDATA[Koen Rens]]></author>
+		<authorurl><![CDATA[https://www.ictscripters.com/]]></authorurl>
+	</authorinformation>
+	
+	<requiredpackages>
+		<requiredpackage minversion="2.0.0 RC 3">com.woltlab.wcf</requiredpackage>
+		<requiredpackage minversion="4.0.0 Beta 11">com.woltlab.wbb</requiredpackage>
+		<requiredpackage minversion="1.1.0">de.joshsboard.jCoins</requiredpackage>
+	</requiredpackages>
+	
+	<instructions type="install">
+		<!-- files -->
+		<instruction type="file">files.tar</instruction>
+		<instruction type="template">templates.tar</instruction>
+                
+		<!-- xml -->
+		<instruction type="option">options.xml</instruction>
+		<instruction type="userGroupOption">userGroupOption.xml</instruction>
+		<instruction type="templateListener">templateListener.xml</instruction>
+                
+		<!-- lng -->
+		<instruction type="language">lang/*.xml</instruction>
+	</instructions>
+	
+	
+	<instructions type="update" fromversion="0.0.1">	
+		<!-- files -->
+		<instruction type="file">files.tar</instruction>
+		<instruction type="template">templates.tar</instruction>
+                
+		<!-- xml -->
+		<instruction type="option">options.xml</instruction>
+		<instruction type="userGroupOption">userGroupOption.xml</instruction>
+		<instruction type="templateListener">templateListener.xml</instruction>		
+                
+		<!-- lng -->
+		<instruction type="language">lang/*.xml</instruction>
+	</instructions>	
+</package>
