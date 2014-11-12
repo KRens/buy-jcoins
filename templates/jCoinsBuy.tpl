@@ -20,7 +20,7 @@
 		<p class="error">{lang}wcf.global.form.error{/lang}</p>
 	{/if}
 
-	{if $success}
+	{if $success|isset}
 		<p class="success">{lang}wcf.jcoins.buy.success{/lang}</p>
 	{/if}
 

@@ -11,10 +11,10 @@ use wcf\system\user\notification\UserNotificationHandler;
 use wcf\system\user\notification\object\JCoinsTransferNotificationObject;
 
 /**
- * A transfer form for jcoins
+ * A buying form for jcoins
  *
- * @author Joshua Rüsweg
- * @package de.joshsboard.jcoins
+ * @author Koen Rens
+ * @package be.ictscripters.jcoinsBuy
  * @subpackage wcf.form
  */
 class JCoinsBuyForm extends AbstractForm {
@@ -62,34 +62,10 @@ class JCoinsBuyForm extends AbstractForm {
 	public $sum = 0;
 
 	/**
-	 * a reason for the transfer
-	 * @var string
-	 */
-	public $reason = '';
-
-	/**
-	 * the user
-	 * @var wcf\data\user\UserProfile
-	 */
-	public $user = array();
-
-	/**
 	 * all user name for the transfer
 	 * @var string
 	 */
 	public $usernames = "";
-
-	/**
-	 * is the transfer moderate
-	 * @var boolean
-	 */
-	public $isModerativ = 0;
-
-	/**
-	 * true if transfer is succeded
-	 * @var boolean
-	 */
-	public $success = false;
 
 	/**
 	 * @see wcf\page\IPage::readParameters()
@@ -111,9 +87,7 @@ class JCoinsBuyForm extends AbstractForm {
 		if (isset($_POST['pay'])) $this->pay = StringUtil::trim($_POST['pay']);
 		if (isset($_POST['otheramount'])) $this->otheramount = StringUtil::trim($_POST['otheramount']);
 		if (isset($_POST['sum'])) $this->sum = StringUtil::trim($_POST['sum']);
-		if (isset($_POST['reason'])) $this->reason = StringUtil::trim($_POST['reason']);
 		if (isset($_POST['username'])) $this->usernames = StringUtil::trim($_POST['username']);
-		if (isset($_POST['isModerativ']) && $_POST['isModerativ'] == 1 && WCF::getSession()->getPermission('mod.jcoins.canModTransfer')) $this->isModerativ = 1;
 
 		if (count(explode(',', $this->usernames)) > 0) {
 			$users = explode(',', $this->usernames);
@@ -128,9 +102,6 @@ class JCoinsBuyForm extends AbstractForm {
 	public function validate() {
 
 		if(!isset($_POST['selectpayment'])){
-
-			// remove user doubles
-			$this->user = array_unique($this->user);
 
 			if (StringUtil::length($this->sum) > 55) {
 				throw new UserInputException('sum', 'tooLong');
@@ -153,11 +124,6 @@ class JCoinsBuyForm extends AbstractForm {
 					throw new UserInputException('user', 'isIgnored');
 				}
 			}
-			/*
-		if (WCF::getUser()->jCoinsBalance < ($this->sum * count($this->user)) && !$this->isModerativ) {
-			throw new UserInputException('sum', 'tooMuch');
-		}
-*/
 
 			parent::validate();
 		}
@@ -232,11 +198,11 @@ class JCoinsBuyForm extends AbstractForm {
 				foreach ($this->user as $user) {
 					$this->statementAction = new UserJcoinsStatementAction(array(), 'create', array(
 							'data' => array(
-								'reason' => $this->reason,
+								'reason' => WCF::getLanguage()->get('wcf.jcoins.buy'),
 								'sum' => $resultvalue[1],
 								'userID' => $user->userID,
 								'executedUserID' => WCF::getUser()->userID,
-								'isModTransfer' => $this->isModerativ
+								'isModTransfer' => '0'
 							),
 							'changeBalance' => 1
 						));
@@ -361,11 +327,7 @@ class JCoinsBuyForm extends AbstractForm {
 				'pay' => $this->pay,
 				'amount' => $amount,
 				'paymethod' => $paymethod,
-				'user' => $this->user,
-				'sum' => $this->sum,
-				'reason' => $this->reason,
-				'success' => $this->success,
-				'isModerativ' => $this->isModerativ
+				'sum' => $this->sum
 			));
 	}
 
