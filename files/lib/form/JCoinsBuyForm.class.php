@@ -66,6 +66,12 @@ class JCoinsBuyForm extends AbstractForm {
 	 * @var string
 	 */
 	public $usernames = "";
+	
+	/**
+	* true if transfer is succeded
+	* @var boolean
+	*/
+	public $success = false;	
 
 	/**
 	 * @see wcf\page\IPage::readParameters()
@@ -327,6 +333,7 @@ class JCoinsBuyForm extends AbstractForm {
 				'pay' => $this->pay,
 				'amount' => $amount,
 				'paymethod' => $paymethod,
+				'success' => $this->success,
 				'sum' => $this->sum
 			));
 	}
