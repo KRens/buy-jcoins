@@ -5,6 +5,8 @@ use wcf\util\ArrayUtil;
 use wcf\system\exception\UserInputException;
 use wcf\system\WCF;
 use wcf\util\StringUtil;
+use wcf\util\UserUtil;
+use wcf\util\HTTPRequest;
 use wcf\data\user\UserProfile;
 use wcf\data\user\jcoins\statement\UserJcoinsStatementAction;
 use wcf\system\user\notification\UserNotificationHandler;
@@ -153,7 +155,11 @@ class JCoinsBuyForm extends AbstractForm {
 			$url  = $this->validationurl."?".
 				"type=payme&tologin=".urlencode(WCF::getUser()->username)."&siteid=".urlencode($this->siteid)."&sitepass=".urlencode($this->sitepass)."&pincode=".urlencode($this->sum);
 
-			$result = trim(@file_get_contents($url)); //witregels ook weghalen in antwoord
+			$request = new HTTPRequest($url);
+			$request->execute();
+			$reply = $request->getReply();
+			
+			$result = trim($reply['body']);			
 
 			$resultvalue=explode("|",$result);
 
@@ -256,7 +262,7 @@ class JCoinsBuyForm extends AbstractForm {
 			$country=htmlspecialchars(addslashes(StringUtil::trim($_GET['country'])));
 		}else{
 			$country = '';
-			$ip = $_SERVER['REMOTE_ADDR'];
+			$ip = UserUtil::getIpAddress();
 
 			$host = gethostbyaddr( $ip ); // Get host by ip
 			if( $host == $ip )

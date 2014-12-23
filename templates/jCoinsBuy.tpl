@@ -88,13 +88,13 @@
 				<legend>{lang}wcf.jcoins.buy.getCode{/lang}</legend>	
 {if $pay && $country}
 <a href='/JCoinsBuy/'>{lang}wcf.jcoins.buy.restart{/lang}</a><br><br>
-<iframe src="https://dimopay.com/popup.php?p=payment/index&logo=&lang={JCOINS_BUY_LANGUAGE}&country={if $country==1}0{else}{$country}{/if}{$amount}{$paymethod}" width="430" height="900" frameborder="0"></iframe>
+<iframe src="https://dimopay.com/popup.php?p=payment/index&amp;logo=&amp;lang={JCOINS_BUY_LANGUAGE}&amp;country={if $country==1}0{else}{$country}{/if}{$amount}{$paymethod}" width="430" height="900" frameborder="0"></iframe>
 
 {else}
 	
 	<form method="post" id="paymentform"><table align="left" width="100%">
          <tr>
-         <td align="left" colspan="4">{lang}wcf.jcoins.buy.selectCountry{/lang}: <select onchange="document.location.href='/JCoinsBuy/?country='+this.value" style="margin-top: 4px; width: 174px; height: 25px;">
+         <td colspan="4">{lang}wcf.jcoins.buy.selectCountry{/lang}: <select onchange="document.location.href='{link controller='JCoinsBuy'}country='+this.value{/link}" style="margin-top: 4px; width: 174px; height: 25px;">
 
 		    <option value="-1">{lang}wcf.jcoins.buy.selectCountry{/lang}</option>
             <option value="32"{if $country == '32'} selected{/if}>{lang}wcf.jcoins.buy.Belgium{/lang}</option>
@@ -111,13 +111,13 @@
 		  </td>
          </tr>
          <tr>
-         <td align="center" colspan="4">&nbsp;</td>
+         <td colspan="4">&nbsp;</td>
          </tr>
          <tr>
-          <td align="center" class="tab-title" width="4%">&nbsp;</td>
-          <td align="left" class="tab-title" width="66%"><strong>{lang}wcf.jcoins.buy.paymentMethod{/lang}</strong></td>
-          <td align="center" class="tab-title" width="15%"><center><strong>{lang}wcf.jcoins.buy.Price{/lang}</strong></center></td>
-          <td align="center" class="tab-title" width="15%"><center><strong>{lang}wcf.jcoins.buy.amountjCoins{/lang}</strong></center></td>
+          <td class="tab-title" width="4%">&nbsp;</td>
+          <td class="tab-title" width="66%" style="font-weight:bold;">{lang}wcf.jcoins.buy.paymentMethod{/lang}</td>
+          <td class="tab-title" width="15%" style="text-align:center;font-weight:bold;">{lang}wcf.jcoins.buy.Price{/lang}</td>
+          <td class="tab-title" width="15%" style="text-align:center;font-weight:bold;">{lang}wcf.jcoins.buy.amountjCoins{/lang}</td>
          </tr>
 
 
@@ -199,10 +199,10 @@
 {* No iDeal outside of Netherlands *}
 {else}		
 		<tr>
-          <td align="left" class="tab-maintxt"><center><input type="radio" value="{$payid}-{$amount|constant}" name="pay"></center></td>
-          <td align="left" class="tab-maintxt"><img src="{$__wcf->getPath()}images/pay/{$icon}"> {$label}</td>
-          <td align="left" class="tab-maintxt"><center>&euro; {$amountdisplay/100|round:2|number_format:2:',':'.'}</center></td>
-          <td align="left" class="tab-maintxt"><center>{$payout}</center></td>
+          <td class="tab-maintxt" style="text-align:center;"><input type="radio" value="{$payid}-{$amount|constant}" name="pay"></td>
+          <td class="tab-maintxt"><img src="{$__wcf->getPath()}images/pay/{$icon}"> {$label}</td>
+          <td class="tab-maintxt" style="text-align:center;">&euro; {$amountdisplay/100|round:2|number_format:2:',':'.'}</td>
+          <td class="tab-maintxt" style="text-align:center;">{$payout}</td>
          </tr>
 {/if}
 {/if}
@@ -212,20 +212,20 @@
        
 {if JCOINS_BUY_OPTIONCUSTOM}          		 
          <tr>
-         <td align="center" colspan="4">&nbsp;</td>
+         <td colspan="4">&nbsp;</td>
          </tr> 
          <tr>
-          <td align="left" class="tab-maintxt"><center><input type="radio" value="100" name="pay" id="otheramountsubmit"></center></td>
-          <td align="left" class="tab-maintxt">{lang}wcf.jcoins.buy.others{/lang}</td>
-          <td align="left" class="tab-maintxt"><center>-</center></td>
-          <td align="left" class="tab-maintxt"><center><input type="text" name="otheramount" id="otheramount" onclick="javascript:tickotheramount();"></input></center></td>
+          <td class="tab-maintxt" style="text-align:center;"><input type="radio" value="100" name="pay" id="otheramountsubmit"></td>
+          <td class="tab-maintxt">{lang}wcf.jcoins.buy.others{/lang}</td>
+          <td class="tab-maintxt" style="text-align:center;">-</td>
+          <td class="tab-maintxt" style="text-align:center;"><input type="text" name="otheramount" id="otheramount" onclick="javascript:tickotheramount();"></input></td>
          </tr>   
 {/if}         
          <tr>
-         <td align="center" colspan="4">&nbsp;<input type="hidden" name="country" value="".$country.""></td>
+         <td colspan="4">&nbsp;<input type="hidden" name="country" value="{$country}"></td>
          </tr>  
          <tr>
-         <td align="center" colspan="4"><center><input type="submit" name="selectpayment" value="{lang}wcf.jcoins.buy.goToPaymentScreen{/lang}"></center></td>
+         <td colspan="4" style="text-align:center;"><input type="submit" name="selectpayment" value="{lang}wcf.jcoins.buy.goToPaymentScreen{/lang}"></td>
          </tr>          
        </table>
        {@SECURITY_TOKEN_INPUT_TAG}
