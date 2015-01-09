@@ -94,7 +94,7 @@
 	
 	<form method="post" id="paymentform"><table align="left" width="100%">
          <tr>
-         <td colspan="4">{lang}wcf.jcoins.buy.selectCountry{/lang}: <select onchange="document.location.href='{link controller='JCoinsBuy'}country='+this.value{/link}" style="margin-top: 4px; width: 174px; height: 25px;">
+         <td colspan="4">{lang}wcf.jcoins.buy.selectCountry{/lang}: <select onchange="document.location.href='{$jcoinsBuyLink|encodeJS}{if $jcoinsBuyLink|strpos:'?' !== false}&{else}?{/if}country='+this.value;" style="margin-top: 4px; width: 174px; height: 25px;">
 
 		    <option value="-1">{lang}wcf.jcoins.buy.selectCountry{/lang}</option>
             <option value="32"{if $country == '32'} selected{/if}>{lang}wcf.jcoins.buy.Belgium{/lang}</option>
