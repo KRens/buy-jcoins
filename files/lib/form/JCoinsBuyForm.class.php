@@ -262,9 +262,17 @@ class JCoinsBuyForm extends AbstractForm {
 			$country=htmlspecialchars(addslashes(StringUtil::trim($_GET['country'])));
 		}else{
 			$country = '';
-			$ip = UserUtil::getIpAddress();
 
-			$host = gethostbyaddr( $ip ); // Get host by ip
+			$ip = UserUtil::convertIPv6To4(UserUtil::getIpAddress());
+
+			if(preg_match('/^(?:(25[0-5]|2[0-4]\d|(1[0-9]{2})?|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|(1[0-9]{2})?|[1-9]?\d)$/', $ip)){
+			// format is valid ipv4
+				$host = gethostbyaddr( $ip ); // Get host by ip
+			}else{
+			// format is not a valid ipv4
+				$host="";
+			}
+
 			if( $host == $ip )
 			{
 				// The host is the same as the ip, thus: unknown
