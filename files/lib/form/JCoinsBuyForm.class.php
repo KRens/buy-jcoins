@@ -24,6 +24,8 @@ class JCoinsBuyForm extends AbstractForm {
 	private $validationurl = "http://dimopay.com/payment/validate.php";
 	private $siteid = JCOINS_BUY_SITEID;
 	private $sitepass = JCOINS_BUY_SITEPASS;
+	private $multiplierbonus = JCOINS_BUY_MULTIPLIERBONUS;
+	private $addedbonus = JCOINS_BUY_ADDEDBONUS;
 
 	/**
 	 * the sum to transfer
@@ -93,7 +95,8 @@ class JCoinsBuyForm extends AbstractForm {
 	public function readFormParameters() {
 		parent::readFormParameters();
 		if (isset($_POST['pay'])) $this->pay = StringUtil::trim($_POST['pay']);
-		if (isset($_POST['otheramount'])) $this->otheramount = StringUtil::trim($_POST['otheramount']);
+		if (isset($_POST['otheramount'])) $this->otheramount = round((StringUtil::trim(StringUtil::replace(array('.',','),'',$_POST['otheramount']))/$this->multiplierbonus)-$this->addedbonus);
+
 		if (isset($_POST['sum'])) $this->sum = StringUtil::trim($_POST['sum']);
 		if (isset($_POST['username'])) $this->usernames = StringUtil::trim($_POST['username']);
 
@@ -211,7 +214,7 @@ class JCoinsBuyForm extends AbstractForm {
 					$this->statementAction = new UserJcoinsStatementAction(array(), 'create', array(
 							'data' => array(
 								'reason' => WCF::getLanguage()->get('wcf.jcoins.buy'),
-								'sum' => $resultvalue[1],
+								'sum' => round(($resultvalue[1]*$multiplierbonus)+$addedbonus),
 								'userID' => $user->userID,
 								'executedUserID' => WCF::getUser()->userID,
 								'isModTransfer' => '0'
@@ -271,12 +274,6 @@ class JCoinsBuyForm extends AbstractForm {
 			}else{
 			// format is not a valid ipv4
 				$host="";
-			}
-
-			if( $host == $ip )
-			{
-				// The host is the same as the ip, thus: unknown
-				//return "Onbekend";
 			}
 
 			$hostsplit = explode( ".", $host ); // Split the host based on the dots

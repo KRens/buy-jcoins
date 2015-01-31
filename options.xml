@@ -40,6 +40,26 @@ nl:wcf.acp.option.jcoins_buy_language_nl]]>
 </selectoptions>
 				<defaultvalue><![CDATA[en]]></defaultvalue>
 			</option>
+
+			<option name="jcoins_buy_multiplierbonus">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>1</defaultvalue>
+			</option>
+
+			<option name="jcoins_buy_addedbonus">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>integer</optiontype>
+				<defaultvalue>0</defaultvalue>
+			</option>			
+
+			<option name="jcoins_buy_currency">
+				<categoryname>jcoins.buycoins.general</categoryname>
+				<optiontype>select</optiontype>
+								<selectoptions>EUR
+USD</selectoptions>
+				<defaultvalue>EUR</defaultvalue>
+			</option>	
 			
 			<option name="jcoins_buy_option1">
 				<categoryname>jcoins.buycoins.general</categoryname>

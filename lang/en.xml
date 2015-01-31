@@ -17,6 +17,15 @@
 		<item name="wcf.acp.option.jcoins_buy_language"><![CDATA[Dimopay.com language]]></item>
 		<item name="wcf.acp.option.jcoins_buy_language_en"><![CDATA[English]]></item>
 		<item name="wcf.acp.option.jcoins_buy_language_nl"><![CDATA[Nederlands]]></item>
+
+		<item name="wcf.acp.option.jcoins_buy_multiplierbonus"><![CDATA[Multiplier bonus]]></item>
+		<item name="wcf.acp.option.jcoins_buy_multiplierbonus.description"><![CDATA[For every eurocent / dollarcent, the user gets x times more {JCOINS_NAME}]]></item>
+
+		<item name="wcf.acp.option.jcoins_buy_addedbonus"><![CDATA[Added bonus]]></item>
+		<item name="wcf.acp.option.jcoins_buy_addedbonus.description"><![CDATA[For every eurocent / dollarcent, the user gets +x extra {JCOINS_NAME}]]></item>
+		
+		<item name="wcf.acp.option.jcoins_buy_currency"><![CDATA[Payments currency]]></item>
+		<item name="wcf.acp.option.jcoins_buy_currency.description"><![CDATA[Currency in which your users will pay]]></item>		
 		
 		<item name="wcf.acp.option.jcoins_buy_option1"><![CDATA[Payment method 1]]></item>
 				<item name="wcf.acp.option.jcoins_buy_option1.description"><![CDATA[Note: iDeal is only available in the Netherlands]]></item>	

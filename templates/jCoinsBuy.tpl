@@ -1,5 +1,13 @@
 {include file="documentHeader"}
 
+{if JCOINS_BUY_CURRENCY=='USD'}
+{capture assign=currency}${/capture}
+{capture assign=currencyformat}.{/capture}
+{else}
+{capture assign=currency}€{/capture}
+{capture assign=currencyformat},{/capture}
+{/if}
+
 <head>
 	<title>{lang}wcf.jcoins.buy{/lang} - {PAGE_TITLE|language}</title>
 
@@ -88,10 +96,10 @@
 				<legend>{lang}wcf.jcoins.buy.getCode{/lang}</legend>	
 {if $pay && $country}
 <a href='/JCoinsBuy/'>{lang}wcf.jcoins.buy.restart{/lang}</a><br><br>
-<iframe src="https://dimopay.com/popup.php?p=payment/index&amp;logo=&amp;lang={JCOINS_BUY_LANGUAGE}&amp;country={if $country==1}0{else}{$country}{/if}{$amount}{$paymethod}" width="430" height="900" frameborder="0"></iframe>
+<iframe src="https://dimopay.com/popup.php?p=payment/index&amp;logo=&amp;cur={JCOINS_BUY_CURRENCY}&amp;lang={JCOINS_BUY_LANGUAGE}&amp;country={if $country==1}0{else}{$country}{/if}{$amount}{$paymethod}" width="430" height="900" frameborder="0"></iframe>
 
 {else}
-	
+	{capture assign=jcoinsBuyLink}{link controller='JCoinsBuy' encode=false}{/link}{/capture}
 	<form method="post" id="paymentform"><table align="left" width="100%">
          <tr>
          <td colspan="4">{lang}wcf.jcoins.buy.selectCountry{/lang}: <select onchange="document.location.href='{$jcoinsBuyLink|encodeJS}{if $jcoinsBuyLink|strpos:'?' !== false}&{else}?{/if}country='+this.value;" style="margin-top: 4px; width: 174px; height: 25px;">
@@ -119,7 +127,6 @@
           <td class="tab-title" width="15%" style="text-align:center;font-weight:bold;">{lang}wcf.jcoins.buy.Price{/lang}</td>
           <td class="tab-title" width="15%" style="text-align:center;font-weight:bold;">{lang}wcf.jcoins.buy.amountjCoins{/lang}</td>
          </tr>
-
 
 {section name=i loop=31 start=1}
 {capture assign=option}JCOINS_BUY_OPTION{$i}{/capture}
@@ -194,6 +201,8 @@
 {capture assign=payout}0{/capture}
 {/if}
 
+{capture assign=payout}{$payout*JCOINS_BUY_MULTIPLIERBONUS+JCOINS_BUY_ADDEDBONUS|round:0}{/capture}
+
 {if $option|constant!='Disabled'}
 {if $option|constant=='iDeal' && $country != '31'}
 {* No iDeal outside of Netherlands *}
@@ -201,7 +210,7 @@
 		<tr>
           <td class="tab-maintxt" style="text-align:center;"><input type="radio" value="{$payid}-{$amount|constant}" name="pay"></td>
           <td class="tab-maintxt"><img src="{$__wcf->getPath()}images/pay/{$icon}"> {$label}</td>
-          <td class="tab-maintxt" style="text-align:center;">&euro; {$amountdisplay/100|round:2|number_format:2:',':'.'}</td>
+          <td class="tab-maintxt" style="text-align:center;">{$currency} {$amountdisplay/100|round:2|number_format:2:',':'.'}</td>
           <td class="tab-maintxt" style="text-align:center;">{$payout}</td>
          </tr>
 {/if}
@@ -218,7 +227,7 @@
           <td class="tab-maintxt" style="text-align:center;"><input type="radio" value="100" name="pay" id="otheramountsubmit"></td>
           <td class="tab-maintxt">{lang}wcf.jcoins.buy.others{/lang}</td>
           <td class="tab-maintxt" style="text-align:center;">-</td>
-          <td class="tab-maintxt" style="text-align:center;"><input type="text" name="otheramount" id="otheramount" onclick="javascript:tickotheramount();"></input></td>
+          <td class="tab-maintxt" style="text-align:center;"><input type="text" name="otheramount" id="otheramount" value="0{$currencyformat}00" onclick="javascript:tickotheramount();"></input></td>
          </tr>   
 {/if}         
          <tr>
