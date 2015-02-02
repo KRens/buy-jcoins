@@ -100,7 +100,7 @@
 
 {else}
 	{capture assign=jcoinsBuyLink}{link controller='JCoinsBuy' encode=false}{/link}{/capture}
-	<form method="post" id="paymentform"><table align="left" width="100%">
+	<form method="post" id="paymentform"><table>
          <tr>
          <td colspan="4">{lang}wcf.jcoins.buy.selectCountry{/lang}: <select onchange="document.location.href='{$jcoinsBuyLink|encodeJS}{if $jcoinsBuyLink|strpos:'?' !== false}&{else}?{/if}country='+this.value;" style="margin-top: 4px; width: 174px; height: 25px;">
 
@@ -122,10 +122,10 @@
          <td colspan="4">&nbsp;</td>
          </tr>
          <tr>
-          <td class="tab-title" width="4%">&nbsp;</td>
-          <td class="tab-title" width="66%" style="font-weight:bold;">{lang}wcf.jcoins.buy.paymentMethod{/lang}</td>
-          <td class="tab-title" width="15%" style="text-align:center;font-weight:bold;">{lang}wcf.jcoins.buy.Price{/lang}</td>
-          <td class="tab-title" width="15%" style="text-align:center;font-weight:bold;">{lang}wcf.jcoins.buy.amountjCoins{/lang}</td>
+          <td class="tab-title" style="width:4%">&nbsp;</td>
+          <td class="tab-title" style="font-weight:bold;width:66%">{lang}wcf.jcoins.buy.paymentMethod{/lang}</td>
+          <td class="tab-title" style="text-align:center;font-weight:bold;width:15%">{lang}wcf.jcoins.buy.Price{/lang}</td>
+          <td class="tab-title" style="text-align:center;font-weight:bold;width:15%">{lang}wcf.jcoins.buy.amountjCoins{/lang}</td>
          </tr>
 
 {section name=i loop=31 start=1}
@@ -209,7 +209,7 @@
 {else}		
 		<tr>
           <td class="tab-maintxt" style="text-align:center;"><input type="radio" value="{$payid}-{$amount|constant}" name="pay"></td>
-          <td class="tab-maintxt"><img src="{$__wcf->getPath()}images/pay/{$icon}"> {$label}</td>
+          <td class="tab-maintxt"><img src="{$__wcf->getPath()}images/pay/{$icon}" alt="paymenticon"> {$label}</td>
           <td class="tab-maintxt" style="text-align:center;">{$currency} {$amountdisplay/100|round:2|number_format:2:',':'.'}</td>
           <td class="tab-maintxt" style="text-align:center;">{$payout}</td>
          </tr>
@@ -227,7 +227,7 @@
           <td class="tab-maintxt" style="text-align:center;"><input type="radio" value="100" name="pay" id="otheramountsubmit"></td>
           <td class="tab-maintxt">{lang}wcf.jcoins.buy.others{/lang}</td>
           <td class="tab-maintxt" style="text-align:center;">-</td>
-          <td class="tab-maintxt" style="text-align:center;"><input type="text" name="otheramount" id="otheramount" value="0{$currencyformat}00" onclick="javascript:tickotheramount();"></input></td>
+          <td class="tab-maintxt" style="text-align:center;"><input type="text" name="otheramount" id="otheramount" value="0{$currencyformat}00" onclick="javascript:tickotheramount();" /></td>
          </tr>   
 {/if}         
          <tr>
