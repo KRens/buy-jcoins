@@ -214,7 +214,7 @@ class JCoinsBuyForm extends AbstractForm {
 					$this->statementAction = new UserJcoinsStatementAction(array(), 'create', array(
 							'data' => array(
 								'reason' => WCF::getLanguage()->get('wcf.jcoins.buy'),
-								'sum' => round(($resultvalue[1]*$multiplierbonus)+$addedbonus),
+								'sum' => round(($resultvalue[1]*$this->multiplierbonus)+$this->addedbonus),
 								'userID' => $user->userID,
 								'executedUserID' => WCF::getUser()->userID,
 								'isModTransfer' => '0'
